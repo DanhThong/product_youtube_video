@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+    	<template id="custom_product" inherit_id="website_sale.product" name="Custom Product">
+    		<xpath expr="//div[@id='product_full_description']" position="before">
+    			<div class="center-block mt32" style="width:560px;" t-if="product.youtube_id">
+	    			<iframe width="560" height="315" t-attf-src="https://www.youtube.com/embed/#{product.youtube_id}" frameborder="0" ></iframe>
+	    		</div>
+    		</xpath>
+    	</template>
+    </data>
+</openerp>
